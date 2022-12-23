@@ -12,8 +12,15 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h4 class="mt-4">Student Data</h4>
-                <form method="post" name="createStudent" action="<?php echo base_url().'index.php/Studentcontroller/create'?>">
+            <div class="d-flex justify-content-between mt-4">
+            <div class="">                <h4 class="">Student Data</h4>
+</div>
+                <div class="">
+                    <a href="<?php echo base_url().'index.php/Studentcontroller/index' ?>" class="btn btn-primary">View</a>
+                </div>
+
+            </div>
+             <form method="post" name="createStudent" action="<?php echo base_url().'index.php/Studentcontroller/create'?>">
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" value="<?php echo set_value('name') ?>" class="form-control mb-2">
@@ -76,7 +83,13 @@
                         <input type="file" name="birth_certificate" value="" class="mt-2">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary mt-2 mb-2">Submit</button>
+                    <div class="d-flex justify-content mt-4 mb-3">
+
+                    <button class="btn btn-primary">Submit</button>
+                        <div class="">
+                    <a href="<?php echo base_url().'index.php/Studentcontroller/index' ?>" class="btn btn-secondary ml-3" style="margin-left: 15px;">Cancel</a>
+                </div>
+                </div>
                     </div>
                 </form>
             </div>
